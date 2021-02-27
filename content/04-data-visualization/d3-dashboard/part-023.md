@@ -1,21 +1,21 @@
 ---
 id: 5d8a4cfbe6b6180ed9a1c9f4
-title: Part 23
+title: Parte 23
 challengeType: 0
 dashedName: part-23
 ---
 
 # --description--
 
-The `range` function describes how to map the domain values for display on the graph. For example, a value of 5000 followers can't use 5000 as it y-coordinate on the SVG or it would be off the graph. You need to tell the range where the top and bottom of the graph is so the scale can give appropriate values for the y-coordinate.
+A função `range` descreve como mapear os valores do domínio para exibição no gráfico. Por exemplo, o valor de 5.000 seguidores não pode usar o número 5.000, pois faz parte da coordenada y no SVG e estaria fora do gráfico. Você precisa dizer ao intervalo onde estão as partes superior e inferior do gráfico para que a escala possa fornecer os valores apropriados para a coordenada y.
 
-Chain the `range` function below the `domain` and pass it an array with `svgHeight - svgMargin` and `svgMargin` as the values. That will translate to `[430, 70]`. This is where the top and bottom of the graph are. So a data point of 5000 followers will map to a value of 430 to use as its y-coordinate and 0 followers will use 70 as its y-coordinate. Any value in between will scale linearly.
+Encadeie a função `range` abaixo do` domain` e passe um array com `svgHeight - svgMargin` e` svgMargin` como os valores. Isso se traduzirá em `[430, 70]`. É onde estão as partes superior e inferior do gráfico. Portanto, um ponto de dados de 5.000 seguidores será mapeado para um valor de 430 para usar como sua coordenada y e 0 seguidores usarão 70 como sua coordenada y. Qualquer valor intermediário será escalado linearmente.
 
-Your graph will have a margin around it for things like axes and labels. The actual line data will display on the inside of this margin area, which is why you use those values. This will become more clear as you progress through the project.
+Seu gráfico terá uma margem ao redor para coisas como eixos e rótulos. Os dados da linha real serão exibidos dentro dessa área de margem, razão pela qual você usa esses valores. Isso ficará mais claro conforme você avança no projeto.
 
 # --hints--
 
-test-text
+texto-teste
 
 ```js
 const range = yScale.range();
